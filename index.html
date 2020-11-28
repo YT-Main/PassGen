@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+  <title>PassGen: Password Generator</title>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="w-full flex h-screen bg-blue-100">
+    <div class="mx-auto my-auto shadow-md p-8 rounded-md bg-white">
+      <div class="text-4xl mx-auto pb-8">PassGen: Password Generator</div>
+
+      <div class="flex pb-2">
+        <input type="checkbox" id="lowercase" name="lowercase" class="w-6 h-6" />
+        <div class="my-auto pl-4">Lowercase Letters</div>
+      </div>
+
+      <div class="flex pb-2">
+        <input type="checkbox" id="uppercase" name="uppercase" class="w-6 h-6" />
+        <div class="my-auto pl-4">Uppercase Letters</div>
+      </div>
+
+      <div class="flex pb-2">
+        <input type="checkbox" id="numbers" name="numbers" class="w-6 h-6" />
+        <div class="my-auto pl-4">Numbers</div>
+      </div>
+
+      <div class="flex pb-2">
+        <input type="checkbox" id="symbol" name="symbol" class="w-6 h-6" />
+        <div class="my-auto pl-4">Symbols</div>
+      </div>
+
+      <div class="pb-2">
+        <div>Length:</div>
+        <input type="number" id="length" name="length" class="h-6 border border-black rounded-sm p-4" />
+      </div>
+      <button id="generate" class="text-white bg-blue-500 rounded px-4 py-2 hover:bg-blue-700">Generate Password</button> 
+      <button id="copy" onclick="copyToClipboard()" class="text-white bg-blue-500 rounded px-4 py-2 hover:bg-blue-700">Copy!</button>
+      
+      <div class="flex text-xl pt-4">
+        <p>Generated Password:   </p>
+        <input id="passOut" class="pl-4" readonly/>
+      </div>      
+    </div>
+  </div>
+</body>
+
+<script src="passgen.js">
+</script>
